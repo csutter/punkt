@@ -1,0 +1,22 @@
+[user]
+  email = git@doublesignal.com
+  name = Christian Sutter
+[alias]
+  prn = remote prune origin
+  pp = push -u origin HEAD
+[merge]
+  ff = only
+  conflictstyle = diff3
+[color]
+  ui = true
+[push]
+  default = simple
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
+[core]
+  excludesfile = ~/.gitignore.global
+  autocrlf = input
+[init]
+  defaultBranch = main

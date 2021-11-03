@@ -34,6 +34,9 @@ bindkey -e
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
 DIRSTACKSIZE=5
 
+# Improved completion
+setopt menu_complete
+
 # Extended globbing
 setopt extendedglob
 

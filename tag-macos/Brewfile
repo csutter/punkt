@@ -1,5 +1,10 @@
 brew "rcm"
 
+# General CLI tools
 brew "ripgrep"
 brew "tree"
 brew "xh"
+
+# Project-specific
+brew "awscli"
+brew "aws-vault"

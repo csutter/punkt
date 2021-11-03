@@ -1,0 +1,5 @@
+brew "rcm"
+
+brew "ripgrep"
+brew "tree"
+brew "xh"

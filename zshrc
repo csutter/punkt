@@ -55,7 +55,7 @@ zstyle ':completion:*' special-dirs true
 r() {
   cd ~/repos/$1
 }
-compctl -/ -W ~/repos c
+compctl -/ -W ~/repos r
 
 # Load aliases
 source "$HOME/.zshrc.d/aliases.zsh"

@@ -21,5 +21,6 @@
 [core]
   excludesfile = ~/.gitignore.global
   autocrlf = input
+  editor = code --wait
 [init]
   defaultBranch = main

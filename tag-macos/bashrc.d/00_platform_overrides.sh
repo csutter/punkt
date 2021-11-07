@@ -14,3 +14,6 @@ export CLICOLOR=1
 
 # Set up TTY for GPG agent
 export GPG_TTY=$(tty)
+
+# Use VS Code as the default editor
+export EDITOR=code

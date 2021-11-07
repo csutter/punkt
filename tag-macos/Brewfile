@@ -3,6 +3,7 @@ brew "rcm"
 # Shell & tools
 brew "bash"
 brew "bash-completion"
+brew "fzf"
 brew "git"
 brew "ripgrep"
 brew "tree"

@@ -53,3 +53,4 @@ Setup notes for getting a new macOS machine set up from scratch.
 - Set default shell to Homebrew's Bash:
   - Add `/usr/local/bin/bash` or `/opt/local/bin/bash` depending on x86/ARM64 (see `brew --prefix`)
   - Change shell using `chsh -s $(brew --prefix)/bin/bash`
+- iTerm2: Enable _Natural Text Editing_ profile (Preferences->Profiles->Keys->Load Preset...)

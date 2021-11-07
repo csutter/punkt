@@ -5,8 +5,9 @@
 sudo apt install -y rcm
 
 # Set up the rcrc and install dotfiles
+rm $HOME/.rcrc
 ln -s $HOME/dotfiles/rcrc/rcrc.devcontainer $HOME/.rcrc
-rcup
+rcup -f
 
 # Install any additional software that I need in devcontainers
 sudo apt install -y fzf git-extras gnupg2 tree

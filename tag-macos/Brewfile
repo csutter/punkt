@@ -1,6 +1,8 @@
 brew "rcm"
 
-# General CLI tools
+# Shell & tools
+brew "bash"
+brew "git-extras"
 brew "ripgrep"
 brew "tree"
 brew "xh"

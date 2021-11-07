@@ -16,3 +16,11 @@ ln -s $HOME/repos/punkt/rcrc/rcrc.macos $HOME/.rcrc
 
 rcup
 ```
+
+## Brewfile
+
+The macOS tag comes with a `Brewfile` to install Bash and tools for local use:
+
+```bash
+brew bundle --file $HOME/Brewfile
+```

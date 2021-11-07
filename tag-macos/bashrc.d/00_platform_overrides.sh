@@ -11,3 +11,6 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Enable ls colours
 export CLICOLOR=1
+
+# Set up TTY for GPG agent
+export GPG_TTY=$(tty)

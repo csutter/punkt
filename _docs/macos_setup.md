@@ -54,3 +54,11 @@ Setup notes for getting a new macOS machine set up from scratch.
   - Add `/usr/local/bin/bash` or `/opt/local/bin/bash` depending on x86/ARM64 (see `brew --prefix`)
   - Change shell using `chsh -s $(brew --prefix)/bin/bash`
 - iTerm2: Enable _Natural Text Editing_ profile (Preferences->Profiles->Keys->Load Preset...)
+
+## GPG signing
+
+[Set up a GPG key](https://samuelsson.dev/sign-git-commits-on-github-with-gpg-in-macos/) and add
+it to Github.
+
+**Known issue**: `gpg-agent.conf` doesn't let me use environment variables to define the location
+of its `pinentry` program so it's hardcoded to the x86 Homebrew prefix. Investigate and fix later.

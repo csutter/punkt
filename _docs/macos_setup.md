@@ -43,3 +43,13 @@ Setup notes for getting a new macOS machine set up from scratch.
 - Battery
   - Configure "turn off display after" for Battery and Power Adapter
   - On Power Adapter, enable "Prevent computer from sleeping automatically"
+
+## Set up CLI
+
+- Install [Homebrew](https://brew.sh)
+- Set up my [dotfiles](https://github.com/csutter/punkt)
+  - Run `brew bundle` to install dependencies, including Bash (macOS uses `zsh` by default and
+    only includes an ancient version of Bash)
+- Set default shell to Homebrew's Bash:
+  - Add `/usr/local/bin/bash` or `/opt/local/bin/bash` depending on x86/ARM64 (see `brew --prefix`)
+  - Change shell using `chsh -s $(brew --prefix)/bin/bash`

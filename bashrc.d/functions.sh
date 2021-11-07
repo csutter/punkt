@@ -2,4 +2,4 @@
 function r() {
   cd "$HOME/repos/$1"
 }
-complete -W "$(ls $HOME/repos)" r
+[ -d $HOME/repos ] && complete -W "$(ls $HOME/repos)" r

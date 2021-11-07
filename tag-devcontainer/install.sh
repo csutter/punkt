@@ -2,7 +2,7 @@
 # TODO: Generalise to allow them to run on RHEL-based containers too
 
 # Install rcm
-sudo apt install rcm
+sudo apt install -y rcm
 
 # Set up the rcrc and install dotfiles
 ln -s $HOME/dotfiles/rcrc/rcrc.devcontainer $HOME/.rcrc

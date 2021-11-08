@@ -29,4 +29,5 @@ alias gu="git pull"
 __git_complete gu _git_pull
 
 # Tools
-alias tf=terraform
+alias be="bundle exec"
+alias tf="terraform"

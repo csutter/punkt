@@ -11,6 +11,10 @@ brew "ripgrep"
 brew "tree"
 brew "xh"
 
+# Podman
+brew "podman"
+brew "docker-compose"
+
 # Project-specific
 brew "awscli"
 brew "aws-vault"

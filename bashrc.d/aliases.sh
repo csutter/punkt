@@ -30,4 +30,5 @@ __git_complete gu _git_pull
 
 # Tools
 alias be="bundle exec"
+alias p="podman"
 alias tf="terraform"

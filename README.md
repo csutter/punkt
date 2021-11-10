@@ -10,16 +10,13 @@ Prerequisites:
 ```bash
 mkdir $HOME/repos
 git clone git@github.com:csutter/punkt.git $HOME/repos/punkt
-
-# For macOS use
-ln -s $HOME/repos/punkt/rcrc/rcrc.macos $HOME/.rcrc
-
-rcup
+$HOME/repos/punkt/install
 ```
 
 ## Brewfile
 
-The macOS tag comes with a `Brewfile` to install Bash and tools for local use:
+The macOS tag comes with a `Brewfile` to install Bash and tools for local use, which gets run by
+the initial install script, and can be re-run if modified using:
 
 ```bash
 brew bundle --file $HOME/Brewfile

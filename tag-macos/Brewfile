@@ -13,7 +13,7 @@ brew "xh"
 
 # Fonts
 tap "homebrew/cask-fonts"
-cask "font-iosevka-ss15"
+cask "font-iosevka-ss08"
 
 # Project-specific
 brew "awscli"

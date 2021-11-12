@@ -11,6 +11,10 @@ brew "ripgrep"
 brew "tree"
 brew "xh"
 
+# Fonts
+tap "homebrew/cask-fonts"
+cask "font-iosevka-ss15"
+
 # Project-specific
 brew "awscli"
 brew "aws-vault"

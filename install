@@ -16,6 +16,7 @@ elif grep Debian /etc/os-release > /dev/null; then
   echo "Bootstrapping dotfiles for Debian-based systems"
 
   # Install rcm
+  sudo apt update
   sudo apt install -y rcm
 
   # Install dotfiles using RCM

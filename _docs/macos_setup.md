@@ -31,6 +31,8 @@ Setup notes for getting a new macOS machine set up from scratch.
     tick "Use F keys as standard function keys on external keyboards"
   - Text: Remove default text replacements
   - Input Sources: Set to US and disable UK
+  - Add a shortcut to disable `Cmd-Q` for Safari:
+    - In Shortcuts > App Shortcuts, add `Cmd-Ctrl-Q` as a shortcut for "Quit Safari"
 - Trackpad
   - Disable "look up & data detectors"
   - Enable "tap to click"

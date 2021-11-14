@@ -17,3 +17,8 @@ export GPG_TTY=$(tty)
 
 # Use VS Code as the default editor
 export EDITOR=code
+
+# Load bash completions
+if [ -f $HOMEBREW_PREFIX/etc/bash_completion ]; then
+. $HOMEBREW_PREFIX/etc/bash_completion
+fi

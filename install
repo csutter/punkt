@@ -6,12 +6,22 @@ echo "Dotfiles are in '$DOTFILES_DIR'"
 if uname -a | grep Darwin > /dev/null; then
   echo "Bootstrapping dotfiles for macOS"
 
-  # Install Homebrew dependencies
-  brew bundle --file $DOTFILES_DIR/tag-macos/Brewfile
+  # Install RCM first
+  brew install rcm
 
   # Install dotfiles using RCM
+  rm $HOME/.rcrc
   ln -s $HOME/repos/punkt/rcrc/rcrc.macos $HOME/.rcrc
   rcup -f
+
+  # Install remaining Homebrew dependencies
+  brew bundle --file $HOME/Brewfile
+
+  # Set up bash completion from Docker.app
+  ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion \
+        /usr/local/etc/bash_completion.d
+  ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion \
+        /usr/local/etc/bash_completion.d
 elif grep Debian /etc/os-release > /dev/null; then
   echo "Bootstrapping dotfiles for Debian-based systems"
 

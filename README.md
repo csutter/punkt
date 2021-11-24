@@ -10,7 +10,7 @@ Prerequisites:
 ```bash
 mkdir $HOME/repos
 git clone git@github.com:csutter/punkt.git $HOME/repos/punkt
-$HOME/repos/punkt/install
+$HOME/repos/punkt/install.sh
 ```
 
 ## Brewfile

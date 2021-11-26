@@ -5,3 +5,6 @@ export DISTRO_FZF_KEY_BINDINGS=/usr/share/doc/fzf/examples/key-bindings.bash
 
 # Use VS Code as the default editor in devcontainers
 export EDITOR=code
+
+# Customise PS1 to show we're in a container
+export PROMPT_PREFIX="  "

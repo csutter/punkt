@@ -66,19 +66,6 @@ elif grep Debian /etc/os-release > /dev/null; then
 
   # Install any additional software that I need
   sudo apt install -y fzf git-extras gnupg2 tree
-elif grep Fedora /etc/os-release > /dev/null; then
-  echo "Bootstrapping dotfiles for Fedora systems"
-
-  # Install rcm
-  sudo dnf install -y rcm
-
-  # Install dotfiles using RCM
-  rm $HOME/.rcrc
-  ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
-  rcup -f
-
-  # Install any additional software that I need
-  sudo dnf install -y fzf git-extras gnupg2 tree
 else
   echo "Unsupported operating system"
 fi

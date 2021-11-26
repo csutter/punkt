@@ -15,7 +15,7 @@ if uname -a | grep Darwin > /dev/null; then
     brew install rcm
 
     # Set up rcrc
-    rm $HOME/.rcrc
+    rm $HOME/.rcrc || true
     ln -s $HOME/repos/punkt/rcrc/rcrc.macos.arm64 $HOME/.rcrc
   else
     echo "Bootstrapping dotfiles for macOS (x86)"
@@ -27,7 +27,7 @@ if uname -a | grep Darwin > /dev/null; then
     brew install rcm
 
     # Set up rcrc
-    rm $HOME/.rcrc
+    rm $HOME/.rcrc || true
     ln -s $HOME/repos/punkt/rcrc/rcrc.macos.x86 $HOME/.rcrc
   fi
 
@@ -60,7 +60,7 @@ elif grep Debian /etc/os-release > /dev/null; then
   sudo apt install -y rcm
 
   # Install dotfiles using RCM
-  rm $HOME/.rcrc
+  rm $HOME/.rcrc || true
   ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
   rcup -f
 

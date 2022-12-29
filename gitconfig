@@ -1,12 +1,14 @@
 [user]
   email = git@doublesignal.com
   name = Christian Sutter
-#  signingkey = D413B701D99AB5B4
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFZCGaMvY2vFp972eZQPb33f3lnaQo3DS4w7G7zeLIR4
 [alias]
   prn = remote prune origin
   pp = push -u origin HEAD
-# [commit]
-#  gpgsign = true
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
 [merge]
   ff = only
   conflictstyle = diff3

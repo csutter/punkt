@@ -55,17 +55,19 @@ if uname -a | grep Darwin > /dev/null; then
 elif grep Debian /etc/os-release > /dev/null; then
   echo "Bootstrapping dotfiles for Debian-based systems"
 
-  # Install rcm
+  # Install an updated git version from backports (bullseye ships with Git 2.30 which is too old to
+  # support Git commit signing with SSH keys, which is a part of my workflow)
+  echo "deb http://deb.debian.org/debian bullseye-backports main" | sudo tee /etc/apt/sources.list.d/bullseye-backports.list
   sudo apt update
-  sudo apt install -y rcm
+  sudo apt install -y git/bullseye-backports
+
+  # Install rcm and additional software packages
+  sudo apt install -y rcm fzf git-extras gnupg2 tree
 
   # Install dotfiles using RCM
   rm $HOME/.rcrc || true
   ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
   rcup -f
-
-  # Install any additional software that I need
-  sudo apt install -y fzf git-extras gnupg2 tree
 else
   echo "Unsupported operating system"
 fi

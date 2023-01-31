@@ -68,6 +68,16 @@ elif grep Debian /etc/os-release > /dev/null; then
   rm $HOME/.rcrc || true
   ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
   rcup -f
+elif grep -e Ubuntu /etc/os-release > /dev/null; then
+  echo "Bootstrapping dotfiles for Ubuntu-based systems"
+
+  # Install rcm and additional software packages
+  sudo apt install -y rcm fzf git-extras gnupg2 tree
+
+  # Install dotfiles using RCM
+  rm $HOME/.rcrc || true
+  ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
+  rcup -f
 else
   echo "Unsupported operating system"
 fi

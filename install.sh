@@ -16,7 +16,7 @@ if uname -a | grep Darwin > /dev/null; then
 
     # Set up rcrc
     rm $HOME/.rcrc || true
-    ln -s $HOME/repos/punkt/rcrc/rcrc.macos.arm64 $HOME/.rcrc
+    ln -s $HOME/Developer/punkt/rcrc/rcrc.macos.arm64 $HOME/.rcrc
   else
     echo "Bootstrapping dotfiles for macOS (x86)"
 
@@ -28,7 +28,7 @@ if uname -a | grep Darwin > /dev/null; then
 
     # Set up rcrc
     rm $HOME/.rcrc || true
-    ln -s $HOME/repos/punkt/rcrc/rcrc.macos.x86 $HOME/.rcrc
+    ln -s $HOME/Developer/punkt/rcrc/rcrc.macos.x86 $HOME/.rcrc
   fi
 
   # Install dotfiles

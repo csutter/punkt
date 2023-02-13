@@ -49,6 +49,7 @@ Setup notes for getting a new macOS machine set up from scratch.
 ## Set up CLI
 
 - Install [Homebrew](https://brew.sh)
+- Create `Developer` folder in home directory
 - Set up my [dotfiles](https://github.com/csutter/punkt)
   - Run `brew bundle` to install dependencies, including Bash (macOS uses `zsh` by default and
     only includes an ancient version of Bash)

@@ -8,9 +8,9 @@ Prerequisites:
 - SSH key set up
 
 ```bash
-mkdir $HOME/repos
-git clone git@github.com:csutter/punkt.git $HOME/repos/punkt
-$HOME/repos/punkt/install.sh
+mkdir $HOME/Developer
+git clone git@github.com:csutter/punkt.git $HOME/Developer/punkt
+$HOME/Developer/punkt/install.sh
 ```
 
 ## Brewfile

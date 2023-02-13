@@ -1,4 +1,4 @@
 EXCLUDES="_docs rcrc LICENSE README.md"
-DOTFILES_DIRS="$HOME/repos/punkt"
+DOTFILES_DIRS="$HOME/Developer/punkt"
 UNDOTTED="bin Brewfile"
 TAGS="macos macos-x86"

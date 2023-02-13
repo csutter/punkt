@@ -1,5 +1,5 @@
 # r(): Jump to repo directory
 function r() {
-  cd "$HOME/repos/$1"
+  cd "$HOME/Developer/$1"
 }
-[ -d $HOME/repos ] && complete -W "$(ls $HOME/repos)" r
+[ -d $HOME/Developer ] && complete -W "$(ls $HOME/Developer)" r

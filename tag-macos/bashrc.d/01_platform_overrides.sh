@@ -15,6 +15,9 @@ export GPG_TTY=$(tty)
 # Use VS Code as the default editor
 export EDITOR=code
 
+# Set up my retroboxer tool in PATH
+pathmunge "$HOME/Developer/retroboxer/bin"
+
 # Some tools don't properly pick up on 1Password SSH agent from `~/.ssh/config` (looking at you,
 # VS Code devcontainers), set it using env variable to get them working
 # cf. https://1password.community/discussion/132867/visual-studio-code-remote-development-server-and-1password-ssh-config

@@ -5,31 +5,17 @@ DOTFILES_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd
 echo "Dotfiles are in '$DOTFILES_DIR'"
 
 if uname -a | grep Darwin > /dev/null; then
-  if uname -a | grep arm64 > /dev/null; then
-    echo "Bootstrapping dotfiles for macOS (arm64)"
+  echo "Bootstrapping dotfiles for macOS"
 
-    # Ensure Homebrew is loaded
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+  # Ensure Homebrew is loaded
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 
-    # Install RCM first
-    brew install rcm
+  # Install RCM first
+  brew install rcm
 
-    # Set up rcrc
-    rm $HOME/.rcrc || true
-    ln -s $HOME/Developer/punkt/rcrc/rcrc.macos.arm64 $HOME/.rcrc
-  else
-    echo "Bootstrapping dotfiles for macOS (x86)"
-
-    # Ensure Homebrew is loaded
-    eval "$(/usr/local/bin/brew shellenv)"
-
-    # Install RCM first
-    brew install rcm
-
-    # Set up rcrc
-    rm $HOME/.rcrc || true
-    ln -s $HOME/Developer/punkt/rcrc/rcrc.macos.x86 $HOME/.rcrc
-  fi
+  # Set up rcrc
+  rm $HOME/.rcrc || true
+  ln -s $HOME/Developer/punkt/rcrc/rcrc.macos $HOME/.rcrc
 
   # Install dotfiles
   rcup -f

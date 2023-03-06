@@ -5,12 +5,6 @@ brew "bash"
 brew "bash-completion"
 brew "fzf"
 brew "git"
-brew "gnupg"
-brew "pinentry-mac"
 brew "ripgrep"
 brew "tree"
 brew "xh"
-
-# Project-specific
-brew "awscli"
-brew "aws-vault"

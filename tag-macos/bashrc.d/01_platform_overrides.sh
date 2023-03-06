@@ -1,3 +1,6 @@
+# Force setting Homebrew prefix (missing on x86 macOS for some reason)
+export HOMEBREW_PREFIX=$(brew --prefix)
+
 # Tool locations (sourced in the non-tagged Bash setup scripts)
 export DISTRO_GIT_COMPLETION=$HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash
 export DISTRO_GIT_PROMPT=$HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh

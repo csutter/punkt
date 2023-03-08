@@ -15,7 +15,7 @@ if uname -a | grep Darwin > /dev/null; then
 
   # Set up rcrc
   rm $HOME/.rcrc || true
-  ln -s $HOME/Developer/punkt/rcrc/rcrc.macos $HOME/.rcrc
+  cp $HOME/Developer/punkt/rcrc/rcrc.macos $HOME/.rcrc
 
   # Install dotfiles
   rcup -f
@@ -52,7 +52,7 @@ elif grep Debian /etc/os-release > /dev/null; then
 
   # Install dotfiles using RCM
   rm $HOME/.rcrc || true
-  ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
+  cp $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
   rcup -f
 elif grep -e Ubuntu /etc/os-release > /dev/null; then
   echo "Bootstrapping dotfiles for Ubuntu-based systems"
@@ -62,7 +62,7 @@ elif grep -e Ubuntu /etc/os-release > /dev/null; then
 
   # Install dotfiles using RCM
   rm $HOME/.rcrc || true
-  ln -s $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
+  cp $DOTFILES_DIR/rcrc/rcrc.devcontainer $HOME/.rcrc
   rcup -f
 else
   echo "Unsupported operating system"

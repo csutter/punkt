@@ -1,0 +1,6 @@
+# GDS tooling
+# c.f. https://docs.publishing.service.gov.uk/manual/get-started.html#4-install-gds-command-line-tools
+tap "alphagov/gds"
+brew "gds-cli"
+brew "govuk-connect"
+cask "aws-vault"

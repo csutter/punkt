@@ -1,2 +1,3 @@
 # This shouldn't live in this repository, but whereever the Brewfile gets linked to
 Brewfile.lock
+Brewfile.lock.json

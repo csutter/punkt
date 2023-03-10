@@ -1,6 +1,12 @@
-# GDS tooling
+# GDS ops tooling
 # c.f. https://docs.publishing.service.gov.uk/manual/get-started.html#4-install-gds-command-line-tools
 tap "alphagov/gds"
 brew "gds-cli"
 brew "govuk-connect"
 cask "aws-vault"
+
+# govuk-docker prerequisites
+#  (these would normally be installed by govuk-docker's `bin/setup`, but I don't want to run that
+#  as it sets up dnsmasq and requires root access, instead I add `dev.gov.uk` to my DNS server)
+brew "pv"
+brew "shellcheck"

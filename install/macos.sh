@@ -3,11 +3,15 @@ echo "Bootstrapping dotfiles for macOS"
 # Install Xcode developer tools
 xcode-select --install || true
 
-# Ensure Homebrew is loaded
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Install Homebrew
+export HOMEBREW_PREFIX=$HOME/.homebrew
+[ -d $HOMEBREW_PREFIX ] || git clone https://github.com/Homebrew/brew $HOMEBREW_PREFIX
 
-# Install RCM first
-brew install rcm
+# Ensure Homebrew is loaded
+eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
+
+# Install Homebrew dependencies
+brew bundle --file $DOTFILES_DIR/tag-macos/Brewfile
 
 # Set up rcrc
 rm $HOME/.rcrc || true
@@ -15,9 +19,6 @@ cp $HOME/Developer/punkt/rcrc/rcrc.macos $HOME/.rcrc
 
 # Install dotfiles
 rcup -f
-
-# Install remaining Homebrew dependencies
-brew bundle --file $HOME/Brewfile
 
 # Set up bash completion from Docker.app
 [ -f $HOMEBREW_PREFIX/etc/bash_completion.d/docker.bash-completion ] || \

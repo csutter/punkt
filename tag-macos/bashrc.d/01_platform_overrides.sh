@@ -1,5 +1,5 @@
 # Load Homebrew shell environment
-eval $(brew shellenv)
+eval $($HOME/.homebrew/bin/brew shellenv)
 
 # Tool locations (sourced in the non-tagged Bash setup scripts)
 export DISTRO_GIT_COMPLETION=$HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash

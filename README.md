@@ -3,10 +3,6 @@
 
 ## Setup
 
-Prerequisites:
-- `rcm` installed via package manager of choice
-- SSH key set up
-
 ```bash
 mkdir $HOME/Developer
 git clone git@github.com:csutter/punkt.git $HOME/Developer/punkt

@@ -31,3 +31,6 @@ __git_complete gu _git_pull
 # Tools
 alias be="bundle exec"
 alias tf="terraform"
+
+# Docker
+alias docker-ps-arch='for i in `docker ps --format "{{.Image}}"` ; do docker image inspect $i --format "$i -> {{.Architecture}} : {{.Os}}" ;done'

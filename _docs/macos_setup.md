@@ -26,16 +26,34 @@ brew bundle --file ~/Developer/punkt/Brewfile
 Note: This needs to be done _before_ setting up the dotfiles for the admin user (as otherwise the
 dotfiles dependencies won't be installed).
 
+## Allow Homebrew bash to be used as shell
+
+I use Bash, not the macOS default zsh. This is installed through Homebrew and needs to be set up as
+an acceptable shell before macOS will allow the standard user accounts to change their default
+shell to it.
+
+```bash
+echo "$HOMEBREW_PREFIX/bin/bash" | sudo tee /etc/shells
+```
+
 ## For each local user that will need the dotfiles installed:
 ### Set up 1Password
 
 This is required for SSH keys for Git. Sign in to 1Password and enable SSH agent.
 
+### Set up Bash as the default user shell
+
+```bash
+chsh -s $HOMEBREW_PREFIX/bin/bash
+```
+
+(You will need to close any terminal apps to start new sessions.)
+
 ### Set up a `Developer` directory in the home directory
 
 This sounds a bit weird as a directory name, but gets a fancy icon from macOS.
 
-### Clone the dotfiles repository into it and set up
+### Clone the dotfiles repository and set up
 
 ```bash
 git clone git@github.com:csutter/punkt.git $HOME/Developer/punkt

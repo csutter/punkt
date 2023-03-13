@@ -1,5 +1,9 @@
+# Ensure Homebrew directories are in PATH
+pathmunge "/opt/homebrew/bin" # arm64
+pathmunge "/usr/local/bin" # x86
+
 # Load Homebrew shell environment
-eval $($HOME/.homebrew/bin/brew shellenv)
+eval $(brew shellenv)
 
 # Tool locations (sourced in the non-tagged Bash setup scripts)
 export DISTRO_GIT_COMPLETION=$HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash

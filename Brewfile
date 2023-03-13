@@ -9,3 +9,10 @@ brew "rcm"
 brew "ripgrep"
 brew "tree"
 brew "xh"
+
+# Containers
+brew "colima"
+brew "docker"
+brew "docker-completion"
+brew "docker-compose"
+brew "docker-compose-completion"

@@ -2,13 +2,55 @@
 
 Setup notes for getting a new macOS machine set up from scratch.
 
-> One day this might be automated - for now, I don't do it often enough to be worth automating.
+## User accounts
 
-## Initial setup
+Create a primary user account with iCloud login as usual during setup, then once installed:
+
+- Set up an `Administrator` account and demote the primary user created during installation to a
+  regular user for personal use
+- Set up further standard user accounts for clients/projects
+
+## Set up Homebrew
+
+Homebrew needs to be installed as the administrator user. Follow the instructions on the
+[Homebrew website](https://brew.sh).
+
+As the admin user, clone the dotfiles to a convenient location (e.g. `~/Developer/punkt`), then
+install Homebrew dependencies using the provided Brewfile. The cloning should be done using the
+HTTPS (not `git://`) repo URL as the admin user won't be logged in to 1Password.
+
+```bash
+brew bundle --file ~/Developer/punkt/Brewfile
+```
+
+Note: This needs to be done _before_ setting up the dotfiles for the admin user (as otherwise the
+dotfiles dependencies won't be installed).
+
+## For each local user that will need the dotfiles installed:
+### Set up 1Password
+
+This is required for SSH keys for Git. Sign in to 1Password and enable SSH agent.
+
+### Set up a `Developer` directory in the home directory
+
+This sounds a bit weird as a directory name, but gets a fancy icon from macOS.
+
+### Clone the dotfiles repository into it and set up
+
+```bash
+git clone git@github.com:csutter/punkt.git $HOME/Developer/punkt
+$HOME/Developer/punkt/install.sh
+```
+
+## Initial macOS setup
+
+> One day this might be automated - for now, I don't do it often enough to be worth automating.
 
 - Remove superfluous icons from Dock
 
 ### System Preferences
+
+> ⚠️ TODO: Adapt to new Ventura "System Settings" app
 
 - General
   - Set appearance to auto, choose colours as desired
@@ -45,23 +87,3 @@ Setup notes for getting a new macOS machine set up from scratch.
 - Battery
   - Configure "turn off display after" for Battery and Power Adapter
   - On Power Adapter, enable "Prevent computer from sleeping automatically"
-
-## Set up CLI
-
-- Install [Homebrew](https://brew.sh)
-- Create `Developer` folder in home directory
-- Set up my [dotfiles](https://github.com/csutter/punkt)
-  - Run `brew bundle` to install dependencies, including Bash (macOS uses `zsh` by default and
-    only includes an ancient version of Bash)
-- Set default shell to Homebrew's Bash:
-  - Add `/usr/local/bin/bash` or `/opt/local/bin/bash` depending on x86/ARM64 (see `brew --prefix`)
-  - Change shell using `chsh -s $(brew --prefix)/bin/bash`
-- iTerm2: Enable _Natural Text Editing_ profile (Preferences->Profiles->Keys->Load Preset...)
-
-## GPG signing
-
-[Set up a GPG key](https://samuelsson.dev/sign-git-commits-on-github-with-gpg-in-macos/) and add
-it to Github.
-
-**Known issue**: `gpg-agent.conf` doesn't let me use environment variables to define the location
-of its `pinentry` program so it's hardcoded to the x86 Homebrew prefix. Investigate and fix later.

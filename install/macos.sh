@@ -1,17 +1,7 @@
 echo "Bootstrapping dotfiles for macOS"
 
-# Install Xcode developer tools
-xcode-select --install || true
-
-# Install Homebrew
-export HOMEBREW_PREFIX=$HOME/.homebrew
-[ -d $HOMEBREW_PREFIX ] || git clone https://github.com/Homebrew/brew $HOMEBREW_PREFIX
-
-# Ensure Homebrew is loaded
-eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
-
-# Install Homebrew dependencies
-brew bundle --file $DOTFILES_DIR/tag-macos/Brewfile
+# Ensure Homebrew environment is in place
+eval "$(brew shellenv)"
 
 # Set up rcrc
 rm $HOME/.rcrc || true

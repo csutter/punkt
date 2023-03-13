@@ -5,15 +5,7 @@
 
 ### On macOS
 
-> ⚠️ Work in progress: I'm not sure how well this will work out, and YMMV.
-
-I am moving towards a strategy of having several accounts on macOS machines.
-
-```bash
-mkdir $HOME/Developer
-git clone git@github.com:csutter/punkt.git $HOME/Developer/punkt
-$HOME/Developer/punkt/install.sh
-```
+See [macOS setup documentation](_docs/macos_setup.md).
 
 ### On devcontainers
 

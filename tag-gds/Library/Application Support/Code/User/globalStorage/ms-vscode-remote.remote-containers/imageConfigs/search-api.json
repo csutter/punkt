@@ -1,14 +1,15 @@
 {
   "extensions": [
-    "davidpallinder.rails-test-runner",
-    "humao.rest-client",
-    "kaiwood.endwise",
-    "KoichiSasada.vscode-rdbg",
-    "rebornix.Ruby",
-    "Shopify.ruby-lsp",
-    "stkb.rewrap",
-    "waderyan.gitblame",
-    "wmaurer.vscode-jumpy"
-  ],
+	"davidpallinder.rails-test-runner",
+	"humao.rest-client",
+	"kaiwood.endwise",
+	"KoichiSasada.vscode-rdbg",
+	"rebornix.ruby",
+	"Shopify.ruby-lsp",
+	"stkb.rewrap",
+	"waderyan.gitblame",
+	"wingrunr21.vscode-ruby",
+	"wmaurer.vscode-jumpy"
+],
   "workspaceFolder": "/govuk/search-api"
 }

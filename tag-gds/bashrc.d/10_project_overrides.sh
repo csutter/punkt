@@ -8,3 +8,9 @@ pathmunge "$GOVUK_ROOT_DIR/govuk-docker/exe"
 alias govd="govuk-docker"
 alias govdr="govuk-docker-run"
 alias govdu="govuk-docker-up"
+
+# Jump to govuk directory
+function dg() {
+  cd "$HOME/Developer/govuk/$1"
+}
+[ -d $HOME/Developer/govuk ] && complete -W "$(ls $HOME/Developer/govuk)" dg

@@ -10,7 +10,13 @@ Create a primary user account with iCloud login as usual during setup, then once
   regular user for personal use
 - Set up further standard user accounts for clients/projects
 
-## Set up Homebrew
+## As administrator...
+### Set up DNS
+
+Change the default DNS by using a configuration profile from my preferred DNS provider (this may
+need to be downloaded as a regular user to be able to log in, and then installed as the admin user).
+
+### Set up Homebrew
 
 Homebrew needs to be installed as the administrator user. Follow the instructions on the
 [Homebrew website](https://brew.sh).
@@ -26,7 +32,7 @@ brew bundle --file ~/Developer/punkt/Brewfile
 Note: This needs to be done _before_ setting up the dotfiles for the admin user (as otherwise the
 dotfiles dependencies won't be installed).
 
-## Allow Homebrew bash to be used as shell
+### Allow Homebrew bash to be used as shell
 
 I use Bash, not the macOS default zsh. This is installed through Homebrew and needs to be set up as
 an acceptable shell before macOS will allow the standard user accounts to change their default
@@ -36,7 +42,7 @@ shell to it.
 echo "$HOMEBREW_PREFIX/bin/bash" | sudo tee /etc/shells
 ```
 
-## For each local user that will need the dotfiles installed:
+## As each local user that will need development tools...
 ### Set up 1Password
 
 This is required for SSH keys for Git. Sign in to 1Password and enable SSH agent.

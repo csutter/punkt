@@ -31,3 +31,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[safe]
+  # Devcontainers struggle with messy ownership of Git folders mounted in through Colima - mark
+  # these directories as 'safe' as they will typically not be owned by the devcontainer user
+  directory = /workspace
+  directory = /govuk

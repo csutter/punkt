@@ -1,15 +1,19 @@
 {
-  "extensions": [
-	"davidpallinder.rails-test-runner",
-	"humao.rest-client",
-	"kaiwood.endwise",
-	"KoichiSasada.vscode-rdbg",
-	"rebornix.ruby",
-	"Shopify.ruby-lsp",
-	"stkb.rewrap",
-	"waderyan.gitblame",
-	"wingrunr21.vscode-ruby",
-	"wmaurer.vscode-jumpy"
-],
-  "workspaceFolder": "/govuk/search-api"
+	"extensions": [
+		"connorshea.vscode-ruby-test-adapter",
+		"hbenl.vscode-test-explorer",
+		"humao.rest-client",
+		"KoichiSasada.vscode-rdbg",
+		"ms-vscode.test-adapter-converter",
+		"Shopify.ruby-lsp",
+		"waderyan.gitblame",
+		"wingrunr21.vscode-ruby",
+		"wmaurer.vscode-jumpy"
+	],
+	"postAttachCommand": "gem install solargraph",
+	"settings": {
+		// Not quite ready for prime time yet (causing issues running tests)
+		"testExplorer.useNativeTesting": false,
+	},
+	"workspaceFolder": "/govuk/search-api"
 }

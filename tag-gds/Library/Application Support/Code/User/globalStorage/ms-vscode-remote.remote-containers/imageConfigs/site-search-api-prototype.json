@@ -16,5 +16,5 @@
 		"editor.formatOnType": true,
 		"rubyLsp.rubyVersionManager": "rbenv"
 	},
-	"workspaceFolder": "/govuk/search-api"
+	"workspaceFolder": "/govuk/site-search-api-prototype"
 }

@@ -10,3 +10,6 @@ cask "aws-vault"
 #  as it sets up dnsmasq and requires root access, instead I add `dev.gov.uk` to my DNS server)
 brew "pv"
 brew "shellcheck"
+
+# GOV.UK PaaS tooling
+brew "cloudfoundry/tap/cf-cli@8"

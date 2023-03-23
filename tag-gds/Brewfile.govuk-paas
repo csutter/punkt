@@ -1,0 +1,2 @@
+# Required tools for PaaS deployment
+brew "cloudfoundry/tap/cf-cli@8"

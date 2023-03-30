@@ -1,0 +1,3 @@
+Host *.playground.doublesignal.net
+  IdentityFile ~/.ssh/playground.pub
+  IdentitiesOnly yes

@@ -1,7 +1,3 @@
 Host *.playground.doublesignal.net
   IdentityFile ~/.ssh/playground.pub
   IdentitiesOnly yes
-
-Host *.test.govuk.digital
-  IdentityFile ~/.ssh/gds.pub
-  IdentitiesOnly yes

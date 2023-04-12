@@ -34,3 +34,7 @@ alias tf="terraform"
 
 # Docker
 alias docker-ps-arch='for i in `docker ps --format "{{.Image}}"` ; do docker image inspect $i --format "$i -> {{.Architecture}} : {{.Os}}" ;done'
+
+# Kubernetes
+alias k="kubectl"
+complete -o default -F __start_kubectl k

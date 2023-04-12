@@ -20,7 +20,7 @@ export CLICOLOR=1
 export GPG_TTY=$(tty)
 
 # Use VS Code as the default editor
-export EDITOR=code
+export EDITOR="code --wait"
 
 # Set up my retroboxer tool in PATH
 pathmunge "$HOME/Developer/retroboxer/bin"

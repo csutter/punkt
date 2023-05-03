@@ -33,6 +33,8 @@ alias be="bundle exec"
 alias tf="terraform"
 
 # Docker
+alias d="docker"
+alias p="podman"
 alias docker-ps-arch='for i in `docker ps --format "{{.Image}}"` ; do docker image inspect $i --format "$i -> {{.Architecture}} : {{.Os}}" ;done'
 
 # Kubernetes

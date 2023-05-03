@@ -1,5 +1,5 @@
-# d(): Jump to Developer directory
-function d() {
+# r(): Jump to Developer (repos) directory
+function r() {
   cd "$HOME/Developer/$1"
 }
-[ -d $HOME/Developer ] && complete -W "$(ls $HOME/Developer)" d
+[ -d $HOME/Developer ] && complete -W "$(ls $HOME/Developer)" r

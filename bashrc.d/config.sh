@@ -22,10 +22,5 @@ PROMPT_COMMAND='__git_ps1 "$PROMPT_PREFIX$bold\w$reset" "\\\$ "'
 # Fzf key bindings
 [ -f $DISTRO_FZF_KEY_BINDINGS ] && source $DISTRO_FZF_KEY_BINDINGS
 
-# `kubectl` completion (if installed)
-if which kubectl > /dev/null 2>&1; then
-  source <(kubectl completion bash)
-fi
-
 # Add user bin folder to PATH
 pathmunge "$HOME/bin"

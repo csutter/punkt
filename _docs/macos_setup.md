@@ -63,8 +63,17 @@ This sounds a bit weird as a directory name, but gets a fancy icon from macOS.
 
 ```bash
 git clone git@github.com:csutter/punkt.git $HOME/Developer/punkt
-$HOME/Developer/punkt/install.sh
 ```
+
+Create a `$HOME/.rcrc` file as follows (adding additional tags if appropriate):
+```
+EXCLUDES="_docs Brewfile LICENSE README.md"
+DOTFILES_DIRS="$HOME/Developer/punkt"
+UNDOTTED="bin Brewfile Library"
+TAGS="macos"
+```
+
+Run `rcup -f` to set up the dotfiles.
 
 ## Initial macOS setup
 

@@ -16,14 +16,8 @@ export HOMEBREW_NO_ANALYTICS=1
 # Enable ls colours
 export CLICOLOR=1
 
-# Set up TTY for GPG agent
-export GPG_TTY=$(tty)
-
 # Use VS Code as the default editor
 export EDITOR="code --wait"
-
-# Set up my retroboxer tool in PATH
-pathmunge "$HOME/Developer/retroboxer/bin"
 
 # Some tools don't properly pick up on 1Password SSH agent from `~/.ssh/config` (looking at you,
 # VS Code devcontainers), set it using env variable to get them working

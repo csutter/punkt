@@ -1,4 +1,0 @@
-EXCLUDES="_docs rcrc Brewfile LICENSE README.md"
-DOTFILES_DIRS="$HOME/dotfiles"
-UNDOTTED="bin"
-TAGS="devcontainer"

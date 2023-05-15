@@ -9,8 +9,9 @@ See [macOS setup documentation](_docs/macos_setup.md).
 
 ### On devcontainers
 
-The repository provides a `install.sh` file which will automatically be picked up by VS Code when
-starting a devcontainer or attaching to a regular Docker container.
+The `tag-devcontainer` tag provides an `install.sh` file which will should be configured in VS Code
+as the devcontainer install script (alongside an install directory of `$HOME/dotfiles`). This will
+set up `rcm` and other tooling, and set up the dotfiles.
 
 ## Brewfile
 

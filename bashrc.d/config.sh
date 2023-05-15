@@ -26,3 +26,6 @@ PROMPT_COMMAND='__git_ps1 "$PROMPT_PREFIX$bold\w$reset" "\\\$ "'
 if which kubectl > /dev/null 2>&1; then
   source <(kubectl completion bash)
 fi
+
+# Add user bin folder to PATH
+pathmunge "$HOME/bin"

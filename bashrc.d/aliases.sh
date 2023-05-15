@@ -32,6 +32,10 @@ __git_complete gu _git_pull
 alias be="bundle exec"
 alias tf="terraform"
 
+# Ansible
+alias a="ansible"
+alias ap="ansible-playbook"
+
 # Docker
 alias d="docker"
 alias p="podman"

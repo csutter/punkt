@@ -26,5 +26,5 @@
 	// it doesn't run the install script again when a new container is opened. This means that the
 	// extra packages my dotfiles install are missing in the container! To work around this, we
 	// force the dotfiles install script to run on every attach. Not great, but does the job.
-	"postAttachCommand": "/root/dotfiles/install.sh"
+	"postAttachCommand": "/root/dotfiles/tag-devcontainer/install.sh"
 }

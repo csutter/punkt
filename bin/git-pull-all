@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+# git-pull-all
+# Runs git pull on all subdirectories of the current directory that are git repos
+
+for dir in ./*; do
+    if [ -d "$dir" ] && [ -d "$dir/.git" ]; then
+        (
+          set -eu
+          echo "Pulling $dir"
+          cd "$dir" && git pull
+        )
+    fi
+done

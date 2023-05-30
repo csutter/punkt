@@ -1,0 +1,66 @@
+# Shortcuts I want:
+# - throw window left/right
+# - switch window focus
+# - change layout
+# - rotate windows
+# Pick layouts
+
+layouts:
+  - tall
+  - fullscreen
+enables-layout-hud-on-space-change: false
+window-resize-step: 2
+mouse-resizes-windows: true
+floating:
+  - com.apple.systempreferences
+
+mod1:
+  - control
+  - option
+mod2:
+  - control
+  - option
+  - shift
+
+cycle-layout:
+  mod: mod1
+  key: space
+cycle-layout-backward:
+  mod: mod2
+  key: space
+shrink-main:
+  mod: mod1
+  key: "-"
+expand-main:
+  mod: mod1
+  key: "="
+swap-cw:
+  mod: mod1
+  key: right
+swap-ccw:
+  mod: mod1
+  key: left
+swap-main:
+  mod: mod1
+  key: enter
+focus-cw:
+  mod: mod1
+  key: down
+focus-ccw:
+  mod: mod1
+  key: up
+throw-space-left:
+  mod: mod2
+  key: left
+throw-space-right:
+  mod: mod2
+  key: right
+toggle-float:
+  mod: mod2
+  key: f
+reevaluate-windows:
+  mod: mod2
+  key: r
+relaunch-amethyst:
+  mod: mod2
+  key: z

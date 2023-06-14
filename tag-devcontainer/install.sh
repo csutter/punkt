@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -eu
 
 # install.sh - Set up a devcontainer with my dotfiles and other tools

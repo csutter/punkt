@@ -5,6 +5,8 @@ pathmunge "/usr/local/bin" # x86
 # Load Homebrew shell environment
 eval $(brew shellenv)
 
+export PROMPT_PREFIX=' \u@\h:'
+
 # Tool locations (sourced in the non-tagged Bash setup scripts)
 export DISTRO_GIT_COMPLETION=$HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash
 export DISTRO_GIT_PROMPT=$HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh

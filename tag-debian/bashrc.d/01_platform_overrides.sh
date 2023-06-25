@@ -1,4 +1,4 @@
-export PROMPT_PREFIX=$'\[\e[31m\]⭔\[\e[0m\]\u@\h:'
+export PROMPT_PREFIX=$'\u@\[\e[34;3m\]\h\u2601\[\e[0m\]:'
 export EDITOR="vim"
 
 # Tool locations for Debian (sourced in the non-tagged Bash setup scripts)

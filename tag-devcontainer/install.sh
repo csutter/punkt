@@ -40,7 +40,7 @@ cat << EOF > $HOME/.rcrc
 EXCLUDES="LICENSE README.md install.sh"
 DOTFILES_DIRS="$HOME/dotfiles"
 UNDOTTED="bin"
-TAGS="devcontainer"
+TAGS="debian devcontainer"
 EOF
 rcup -f
 

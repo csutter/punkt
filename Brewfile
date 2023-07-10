@@ -11,7 +11,7 @@ brew "tree"
 brew "xh"
 
 # Containers
-brew "colima"
 brew "docker"
 brew "docker-compose"
 brew "kubernetes-cli"
+brew "kubectx"

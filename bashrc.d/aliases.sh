@@ -44,4 +44,4 @@ alias docker-ps-arch='for i in `docker ps --format "{{.Image}}"` ; do docker ima
 # Kubernetes
 alias k="kubectl"
 complete -o default -F __start_kubectl k
-alias kns="kubectl config set-context --current --namespace"
+alias kns="kubens"

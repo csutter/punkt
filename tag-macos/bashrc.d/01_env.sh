@@ -1,4 +1,4 @@
-export PROMPT_PREFIX=' \u@\h:'
+export PROMPT_PREFIX='\u@\h:'
 export HOMEBREW_NO_ANALYTICS=1
 export CLICOLOR=1
 export EDITOR="code --wait"

@@ -17,7 +17,11 @@ reset="\[$(tput sgr0)\]"
 bold="\[$(tput bold)\]"
 
 [ -z ${PROMPT_PREFIX+x} ] && export PROMPT_PREFIX="\u@\h:" # Set default prompt prefix if unset
-PROMPT_COMMAND='__git_ps1 "$PROMPT_PREFIX$bold\w$reset" "\\\$ "'
+if [ -n "$TMUX" ]; then
+  PROMPT_COMMAND='__git_ps1 "$bold\w$reset" "\\\$ "'
+else
+  PROMPT_COMMAND='__git_ps1 "$PROMPT_PREFIX$bold\w$reset" "\\\$ "'
+fi
 
 # Fzf key bindings
 [ -f $DISTRO_FZF_KEY_BINDINGS ] && source $DISTRO_FZF_KEY_BINDINGS

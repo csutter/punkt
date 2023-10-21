@@ -24,7 +24,8 @@ if grep Debian /etc/os-release > /dev/null; then
     $CONDITIONAL_SUDO apt install -y git/bullseye-backports
   fi
 
-   $CONDITIONAL_SUDO apt install -y rcm fzf git-extras gnupg2 tree
+  $CONDITIONAL_SUDO apt update
+  $CONDITIONAL_SUDO apt install -y rcm fzf git-extras gnupg2 tree
 elif grep -e Ubuntu /etc/os-release > /dev/null; then
   echo "Bootstrapping dotfiles for Ubuntu-based systems"
 

@@ -14,3 +14,6 @@ function dg() {
   cd "$HOME/Developer/govuk/$1"
 }
 [ -d $HOME/Developer/govuk ] && complete -W "$(ls $HOME/Developer/govuk)" dg
+
+# Discovery engine configuration:
+export DISCOVERY_ENGINE_DATASTORE="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs"

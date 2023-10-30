@@ -17,4 +17,4 @@ function dg() {
 
 # Discovery engine configuration:
 export DISCOVERY_ENGINE_DATASTORE="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs"
-export DISCOVERY_ENGINE_ENGINE="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs"
+export DISCOVERY_ENGINE_SERVING_CONFIG="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs/servingConfigs/default_serving_config"

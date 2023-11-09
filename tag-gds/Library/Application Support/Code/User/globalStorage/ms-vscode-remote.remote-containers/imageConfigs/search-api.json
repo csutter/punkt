@@ -1,10 +1,13 @@
 {
 	"extensions": [
+		"connorshea.vscode-ruby-test-adapter",
 		"eriklynd.json-tools",
 		"GitHub.copilot",
 		"GitHub.copilot-chat",
+		"hbenl.vscode-test-explorer",
 		"humao.rest-client",
 		"KoichiSasada.vscode-rdbg",
+		"ms-vscode.test-adapter-converter",
 		"ms-vsliveshare.vsliveshare",
 		"redhat.vscode-yaml",
 		"Shopify.ruby-lsp",

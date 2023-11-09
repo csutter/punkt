@@ -16,5 +16,5 @@ function dg() {
 [ -d $HOME/Developer/govuk ] && complete -W "$(ls $HOME/Developer/govuk)" dg
 
 # Discovery engine configuration:
-export DISCOVERY_ENGINE_DATASTORE="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs"
+export DISCOVERY_ENGINE_DATASTORE_BRANCH="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs/branches/default_branch"
 export DISCOVERY_ENGINE_SERVING_CONFIG="projects/search-api-v2-dev/locations/global/collections/default_collection/dataStores/local-cs/servingConfigs/default_serving_config"

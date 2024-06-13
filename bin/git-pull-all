@@ -7,7 +7,6 @@ set -eu
 for dir in ./*; do
     if [ -d "$dir" ] && [ -d "$dir/.git" ]; then
         (
-          set -eu
           echo "Pulling $dir"
           cd "$dir" && git pull
         )

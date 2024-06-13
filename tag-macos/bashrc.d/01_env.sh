@@ -3,6 +3,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export CLICOLOR=1
 export EDITOR="code --wait"
 export SYSTEM_TYPE="macos-workstation"
+export COMPOSE_MENU=0 # disable Docker Desktop's irritating hijack of `docker-compose`
 
 # Some tools don't properly pick up on 1Password SSH agent from `~/.ssh/config` (looking at you,
 # VS Code devcontainers), set it using env variable to get them working

@@ -8,7 +8,7 @@ for dir in ./*; do
     if [ -d "$dir" ] && [ -d "$dir/.git" ]; then
         (
           echo "Pulling $dir"
-          cd "$dir" && git pull
+          cd "$dir" && git pull || echo "Failed to pull $dir"
         )
     fi
 done

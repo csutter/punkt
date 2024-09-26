@@ -2,15 +2,16 @@
 	"extensions": [
 		"connorshea.vscode-ruby-test-adapter",
 		"eriklynd.json-tools",
-		"GitHub.copilot",
+		"github.copilot",
+		"github.copilot-chat",
 		"hbenl.vscode-test-explorer",
 		"humao.rest-client",
-		"KoichiSasada.vscode-rdbg",
+		"koichisasada.vscode-rdbg",
 		"ms-vscode.test-adapter-converter",
+		"ms-vsliveshare.vsliveshare",
 		"redhat.vscode-yaml",
-		"Shopify.ruby-lsp",
+		"shopify.ruby-lsp",
 		"waderyan.gitblame",
-		"wingrunr21.vscode-ruby",
 		"wmaurer.vscode-jumpy"
 	],
 	"settings": {

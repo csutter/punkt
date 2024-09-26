@@ -20,7 +20,7 @@
 		"editor.formatOnType": true,
 		"rubyLsp.rubyVersionManager": "rbenv"
 	},
-	"workspaceFolder": "/govuk/finder-frontend",
+	"workspaceFolder": "/govuk/govuk_publishing_components",
 	// VS Code's devcontainer extension marks the fact it has run the dotfiles install script in the
 	// user's home folder (which is shared across all GOV.UK Docker containers). This is fine as far
 	// as the dotfiles are concerned (they only need to be symlinked once there anyway), but means

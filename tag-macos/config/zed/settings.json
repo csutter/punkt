@@ -1,0 +1,30 @@
+{
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "ui_font_family": ".SystemUIFont",
+  "ui_font_size": 15,
+  "buffer_font_family": "PragmataPro",
+  "buffer_font_size": 15,
+  "buffer_font_weight": 350,
+  "buffer_font_features": {
+    "calt": false,
+    "ss01": true // Cursive italics for those times I fancy using Cascadia
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Github Light",
+    "dark": "Github Dark Dimmed"
+  },
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "font_style": "italic"
+      },
+      "comment.doc": {
+        "font_style": "italic"
+      }
+    }
+  }
+}

@@ -3,19 +3,35 @@
     "metrics": false,
     "diagnostics": false
   },
-  "ui_font_family": ".SystemUIFont",
+  // "ui_font_family": ".SystemUIFont",
   "ui_font_size": 15,
   "buffer_font_family": "PragmataPro",
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
   "buffer_font_weight": 350,
-  "buffer_font_features": {
-    "calt": false,
-    "ss01": true // Cursive italics for those times I fancy using Cascadia
-  },
   "theme": {
     "mode": "system",
     "light": "Github Light",
     "dark": "Github Dark Dimmed"
+  },
+  "confirm_quit": true,
+  "preferred_line_length": 100,
+  "tab_size": 2,
+  "wrap_guides": [100],
+  "project_panel": {
+    "default_width": 300,
+    "file_icons": true,
+    "folder_icons": false
+  },
+  "search": {
+    "regex": true
+  },
+  "tabs": {
+    "git_status": true,
+    "close_position": "left"
+  },
+  "soft_wrap": "editor_width",
+  "auto_install_extensions": {
+    "github-theme": true
   },
   "experimental.theme_overrides": {
     "syntax": {
@@ -26,5 +42,9 @@
         "font_style": "italic"
       }
     }
+  },
+  "terminal": {
+    "default_height": 500,
+    "line_height": "comfortable"
   }
 }

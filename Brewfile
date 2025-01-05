@@ -9,6 +9,7 @@ brew "neovim"
 brew "rcm"
 brew "ripgrep"
 brew "tree"
+brew "wezterm"
 brew "xh"
 
 # Containers

@@ -36,6 +36,5 @@ vim.opt.eol = true
 
 -- Basic shortcuts
 vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Write buffer' })
-vim.keymap.set('n', '<leader>vr', ':source $MYVIMRC<CR>', { desc = 'Re-source configuration' })
 
--- require("config.lazy")
+require("config.lazy")

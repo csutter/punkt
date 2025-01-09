@@ -18,4 +18,8 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
+  ui = {
+    size = { width = 1, height = 1 },
+    backdrop = 0,
+  },
 })

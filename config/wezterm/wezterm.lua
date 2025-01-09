@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- Look & feel
-config.color_scheme = 'GitHub Dark'
+config.color_scheme = 'Dark+'
 
 -- Font configuration
 config.font = wezterm.font {

@@ -27,6 +27,7 @@ vim.opt.expandtab = true
 
 -- Gutter
 vim.opt.number = true
+vim.opt.numberwidth = 4
 vim.opt.relativenumber = true
 
 -- Improve split behaviour

@@ -1,21 +1,11 @@
 return {
   {
-    'projekt0n/github-nvim-theme',
+    'nikolvs/vim-sunbather',
     -- ensure we load colorscheme as quickly as we can
     lazy = false,
     priority = 1000,
     config = function()
-      require('github-theme').setup({
-        options = {
-          hide_end_of_buffer = false,
-          dim_inactive = true,
-          styles = {
-            comments = 'italic',
-            keywords = 'bold',
-          },
-        },
-      })
-      vim.cmd.colorscheme('github_dark_default')
+      vim.cmd.colorscheme('sunbather')
     end,
   },
   { 'tpope/vim-commentary' },

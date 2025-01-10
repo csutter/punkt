@@ -18,6 +18,11 @@ return {
       vim.cmd.colorscheme('github_dark_default')
     end,
   },
+  { 'tpope/vim-commentary' },
+  { 'tpope/vim-eunuch' },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-surround' },
+  { 'tpope/vim-vinegar' },
   {
     'lewis6991/gitsigns.nvim',
     config = function()

@@ -1,11 +1,11 @@
 return {
   {
-    'nikolvs/vim-sunbather',
+    'projekt0n/github-nvim-theme',
     -- ensure we load colorscheme as quickly as we can
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('sunbather')
+      vim.cmd.colorscheme('github_dark_default')
     end,
   },
   { 'tpope/vim-commentary' },

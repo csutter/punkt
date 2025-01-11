@@ -6,9 +6,9 @@ config.color_scheme = 'Dark+'
 
 -- Font configuration
 config.font = wezterm.font {
-  family = 'Input',
+  family = 'Cascadia Mono',
   weight = 'Regular',
-  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0', 'ss01=1' },
 }
 config.font_size = 14.0
 config.line_height = 1.2

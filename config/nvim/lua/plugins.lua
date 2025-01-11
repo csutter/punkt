@@ -8,7 +8,6 @@ return {
       vim.cmd.colorscheme('base2tone_evening_dark')
     end,
   },
-  { 'tpope/vim-commentary' },
   { 'tpope/vim-eunuch' },
   { 'tpope/vim-fugitive' },
   { 'tpope/vim-rhubarb' },

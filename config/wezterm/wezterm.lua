@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 -- Look & feel
 config.color_scheme = 'Dark+'
@@ -15,5 +16,16 @@ config.font = wezterm.font {
 }
 config.font_size = 14.0
 config.line_height = 1.2
+
+-- Shortcuts:
+config.debug_key_events = true
+config.keys = {
+  {
+    -- Mimic macOS Terminal behaviour
+    key = 'k',
+    mods = 'CMD',
+    action = act.ClearScrollback 'ScrollbackAndViewport',
+  },
+}
 
 return config

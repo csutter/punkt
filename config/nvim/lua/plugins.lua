@@ -25,5 +25,34 @@ return {
     config = function()
       require('ibl').setup()
     end
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    config = function ()
+      local configs = require('nvim-treesitter.configs')
+
+      configs.setup({
+        ensure_installed = {
+          'c', 'lua', 'vim', 'vimdoc', 'query', 'bash', 'markdown', 'markdown_inline'
+        },
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end
+  },
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'make',
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      local builtin = require('telescope.builtin')
+
+      vim.keymap.set('n', '<leader>p', builtin.find_files, { desc = 'Telescope find files' })
+    end
   }
 }

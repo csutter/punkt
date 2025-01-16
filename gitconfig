@@ -23,6 +23,6 @@
 [core]
   excludesfile = ~/.gitignore.global
   autocrlf = input
-  editor = code --wait
+  # editor = code --wait
 [init]
   defaultBranch = main

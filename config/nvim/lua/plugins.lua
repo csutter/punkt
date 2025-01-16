@@ -9,7 +9,12 @@ return {
     end,
   },
   { 'tpope/vim-eunuch' },
-  { 'tpope/vim-fugitive' },
+  {
+    'tpope/vim-fugitive',
+    config = function()
+      vim.keymap.set('n', '<leader>gg', ':Git<CR>', { desc = 'Fugitive git status' })
+    end
+  },
   { 'tpope/vim-rhubarb' },
   { 'tpope/vim-surround' },
   { 'tpope/vim-vinegar' },
@@ -58,8 +63,6 @@ return {
       vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Telescope oldfiles' })
       vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = 'Telescope registers' })
-
-      vim.keymap.set('n', '<leader>gg', builtin.git_status, { desc = 'Telescope git status' })
     end
   }
 }

@@ -42,5 +42,6 @@ vim.opt.eol = true
 -- Basic shortcuts
 vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Write buffer' })
 vim.keymap.set('n', '<leader>q', ':close<CR>', { desc = 'Close window' })
+vim.keymap.set('n', '<leader>/', ':nohl<CR>', { desc = 'Turn off highlight search' })
 
 require("config.lazy")

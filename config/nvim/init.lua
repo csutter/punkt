@@ -40,8 +40,8 @@ vim.opt.winheight = 5
 vim.opt.eol = true
 
 -- Basic shortcuts
-vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Write buffer' })
-vim.keymap.set('n', '<leader>q', ':close<CR>', { desc = 'Close window' })
-vim.keymap.set('n', '<leader>/', ':nohl<CR>', { desc = 'Turn off highlight search' })
+vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = 'Write buffer' })
+vim.keymap.set('n', '<leader>q', vim.cmd.close, { desc = 'Close window' })
+vim.keymap.set('n', '<leader>/', vim.cmd.nohlsearch, { desc = 'Turn off highlight search' })
 
 require("config.lazy")

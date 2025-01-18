@@ -17,6 +17,7 @@ return {
   },
   { 'tpope/vim-rhubarb' },
   { 'tpope/vim-surround' },
+  { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
   {
     'lewis6991/gitsigns.nvim',

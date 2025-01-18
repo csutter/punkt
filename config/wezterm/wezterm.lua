@@ -10,12 +10,12 @@ config.tab_bar_at_bottom = true
 
 -- Font configuration
 config.font = wezterm.font {
-  family = 'PragmataPro',
-  weight = 'Medium',
-  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0', 'ss01=1' },
+  family = 'Iosevka',
+  weight = 'Regular',
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0', 'ss15=1' },
 }
 config.font_size = 14
-config.line_height = 1.25
+config.line_height = 1.2
 
 -- Shortcuts:
 config.debug_key_events = true

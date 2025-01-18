@@ -1,11 +1,14 @@
 return {
   {
-    'atelierbram/Base2Tone-nvim',
+    'projekt0n/github-nvim-theme',
+    name = 'github-theme',
     -- ensure we load colorscheme as quickly as we can
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('base2tone_evening_dark')
+      require('github-theme').setup({})
+
+      vim.cmd.colorscheme('github_dark_default')
     end,
   },
   { 'tpope/vim-eunuch' },

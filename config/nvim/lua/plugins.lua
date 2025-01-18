@@ -69,5 +69,12 @@ return {
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Telescope oldfiles' })
       vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = 'Telescope registers' })
     end
-  }
+  },
+  {
+    'echasnovski/mini.nvim',
+    version = '*',
+    config = function()
+      require('mini.tabline').setup() 
+    end
+  },
 }

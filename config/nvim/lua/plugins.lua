@@ -19,9 +19,9 @@ return {
     end
   },
   { 'tpope/vim-rhubarb' },
-  { 'tpope/vim-surround' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
+  { 'kylechui/nvim-surround', version = '*' },
   {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
@@ -67,6 +67,7 @@ return {
     'echasnovski/mini.nvim',
     version = '*',
     config = function()
+      require('mini.pairs').setup()
       require('mini.tabline').setup()
 
       require('mini.diff').setup({
@@ -75,8 +76,6 @@ return {
           signs = { add = '▌', change = '▌', delete = '▁' },
         }
       })
-
-      require('mini.pairs').setup()
 
       require('mini.trailspace').setup()
       vim.api.nvim_create_autocmd('BufWritePre', {

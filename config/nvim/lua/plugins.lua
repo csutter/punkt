@@ -69,6 +69,8 @@ return {
     config = function()
       require('mini.tabline').setup()
 
+      require('mini.git').setup()
+
       require('mini.diff').setup({
         view = {
           style = 'sign',
@@ -83,6 +85,10 @@ return {
           MiniTrailspace.trim()
           MiniTrailspace.trim_last_lines()
         end
+      })
+
+      require('mini.statusline').setup({
+        use_icons = false,
       })
     end
   },

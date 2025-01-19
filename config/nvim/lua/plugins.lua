@@ -23,12 +23,6 @@ return {
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
   {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  },
-  {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     config = function()
@@ -74,6 +68,12 @@ return {
     version = '*',
     config = function()
       require('mini.tabline').setup() 
+      require('mini.diff').setup({
+        view = {
+          style = 'sign',
+          signs = { add = '▌', change = '▌', delete = '▁' },
+        }
+      })
     end
   },
 }

@@ -12,7 +12,7 @@ config.tab_bar_at_bottom = true
 config.font = wezterm.font {
   family = 'Iosevka',
   weight = 'Regular',
-  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0', 'ss15=1' },
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0', 'ss05=1' },
 }
 config.font_size = 14
 config.line_height = 1.2

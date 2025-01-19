@@ -69,14 +69,14 @@ return {
     config = function()
       require('mini.tabline').setup()
 
-      require('mini.git').setup()
-
       require('mini.diff').setup({
         view = {
           style = 'sign',
           signs = { add = '▌', change = '▌', delete = '▁' },
         }
       })
+
+      require('mini.pairs').setup()
 
       require('mini.trailspace').setup()
       vim.api.nvim_create_autocmd('BufWritePre', {
@@ -87,9 +87,14 @@ return {
         end
       })
 
-      require('mini.statusline').setup({
+      local statusline = require('mini.statusline')
+      statusline.setup({
         use_icons = false,
       })
+      -- This normally relies on mini.git, which I don't use as it conflicts with the (more
+      -- powerful) vim-fugitive - so let's pull out fugitive's statusline.
+      statusline.section_git = function()
+        return vim.fn['FugitiveStatusline']()
+      end
     end
   },
-}

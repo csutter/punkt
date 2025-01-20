@@ -31,7 +31,7 @@ vim.opt.numberwidth = 4
 vim.opt.relativenumber = true
 
 -- Improve split behaviour
-vim.opt.splitbelow = true 
+vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.winwidth = 30
 vim.opt.winheight = 5

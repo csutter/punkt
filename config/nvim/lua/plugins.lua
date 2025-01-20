@@ -21,7 +21,13 @@ return {
   { 'tpope/vim-rhubarb' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
-  { 'kylechui/nvim-surround', version = '*' },
+  {
+    'kylechui/nvim-surround',
+    version = '*',
+    config = function()
+      require('nvim-surround').setup()
+    end
+  },
   {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+use_ruby() {
+  local ruby_dir=$HOME/.rubies/$1
+  if [ ! -d "$ruby_dir" ]; then
+    echo "Could not use Ruby $1: Directory '$ruby_dir' does not exist" >&2
+    echo "Try installing using: ruby-build $1 $ruby_dir"
+    return 1
+  fi
+
+  load_prefix $ruby_dir
+  layout ruby
+}

@@ -2,3 +2,7 @@
 .scratch
 
 .DS_Store
+
+# TODO: Decide whether to keep direnv config out-of-tree instead
+.envrc
+.direnv

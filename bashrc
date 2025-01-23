@@ -23,3 +23,6 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+
+# Load direnv _last_ as setting up other things after can cause headaches
+eval "$(direnv hook bash)"

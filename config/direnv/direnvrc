@@ -1,5 +1,11 @@
 #!/bin/bash
 
+layout_govuk() {
+  export GOVUK_ROOT_DIR=$HOME/Developer/govuk
+
+  path_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
+}
+
 use_ruby() {
   local ruby_dir=$HOME/.rubies/$1
   if [ ! -d "$ruby_dir" ]; then

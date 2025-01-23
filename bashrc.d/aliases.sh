@@ -1,5 +1,6 @@
 # Shell
 alias sup="source $HOME/.bashrc && echo 'Reloaded bashrc.'"
+alias path="echo $PATH | tr ':' '\n'"
 
 # Directories
 alias l="ls"

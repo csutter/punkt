@@ -3,7 +3,7 @@
 layout_govuk() {
   export GOVUK_ROOT_DIR=$HOME/Developer/govuk
 
-  path_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
+  PATH_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
 }
 
 use_ruby() {

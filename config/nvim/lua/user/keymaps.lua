@@ -6,14 +6,12 @@ vim.keymap.set('n', '<leader>q', vim.cmd.bdelete, { desc = 'Close window' })
 vim.keymap.set('n', '_/', vim.cmd.nohlsearch, { desc = 'Turn off highlight search' })
 vim.keymap.set('n', '_ ', ':set list!<CR>', { desc = 'Toggle list chars', silent = true })
 
--- Window navigation
-vim.keymap.set('n', '<C-H>', '<C-w>h', { desc = 'Focus on left window' })
-vim.keymap.set('n', '<C-J>', '<C-w>j', { desc = 'Focus on below window' })
-vim.keymap.set('n', '<C-K>', '<C-w>k', { desc = 'Focus on above window' })
-vim.keymap.set('n', '<C-L>', '<C-w>l', { desc = 'Focus on right window' })
-
--- Window resizing
-vim.keymap.set('n', '<C-S-h>', '<C-w><', { desc = 'Decrease window width' })
-vim.keymap.set('n', '<C-S-j>', '<C-w>-', { desc = 'Decrease window height' })
-vim.keymap.set('n', '<C-S-k>', '<C-w>+', { desc = 'Increase window height' })
-vim.keymap.set('n', '<C-S-l>', '<C-w>>', { desc = 'Increase window width' })
+-- Disable arrow keys for insert and visual mode, to wean myself off
+vim.keymap.set('n', '<Up>', '<Nop>')
+vim.keymap.set('n', '<Down>', '<Nop>')
+vim.keymap.set('n', '<Left>', '<Nop>')
+vim.keymap.set('n', '<Right>', '<Nop>')
+vim.keymap.set('v', '<Up>', '<Nop>')
+vim.keymap.set('v', '<Down>', '<Nop>')
+vim.keymap.set('v', '<Left>', '<Nop>')
+vim.keymap.set('v', '<Right>', '<Nop>')

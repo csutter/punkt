@@ -1,6 +1,6 @@
 -- Basic leader shortcuts
 vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = 'Write buffer' })
-vim.keymap.set('n', '<leader>q', vim.cmd.bdelete, { desc = 'Close window' })
+vim.keymap.set('n', '<leader>h', vim.cmd.hide, { desc = 'Hide buffer' })
 
 -- Toggles
 vim.keymap.set('n', '_/', vim.cmd.nohlsearch, { desc = 'Turn off highlight search' })

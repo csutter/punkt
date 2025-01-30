@@ -7,7 +7,6 @@ alias l="ls"
 alias ll="ls -al"
 
 # Git
-source $DISTRO_GIT_COMPLETION # Required for __git_complete
 alias g="git"
 __git_complete g _git_main
 alias ga="git add"
@@ -46,3 +45,7 @@ alias docker-ps-arch='for i in `docker ps --format "{{.Image}}"` ; do docker ima
 alias k="kubectl"
 complete -o default -F __start_kubectl k
 alias kns="kubens"
+
+# (Neo)vim
+alias v="nvim"
+alias vim="nvim"

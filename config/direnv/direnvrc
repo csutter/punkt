@@ -1,19 +1,15 @@
 #!/bin/bash
 
-layout_govuk() {
+# Layout govuk_docker: Set up for projects run through GOV.UK
+layout_govuk_docker() {
+  local project_name=$1
+
+  # Set up GOV.UK Docker
   export GOVUK_ROOT_DIR=$HOME/Developer/govuk
-
   PATH_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
-}
 
-use_ruby() {
-  local ruby_dir=$HOME/.rubies/$1
-  if [ ! -d "$ruby_dir" ]; then
-    echo "Could not use Ruby $1: Directory '$ruby_dir' does not exist" >&2
-    echo "Try installing using: ruby-build $1 $ruby_dir"
-    return 1
-  fi
-
-  load_prefix $ruby_dir
-  layout ruby
+  # Set up project commands
+  export PUNKT_CMD_BUILD='(cd "${GOVUK_ROOT_DIR}/govuk-docker" && make ${project_name})'
+  export PUNKT_CMD_RUN="govuk-docker-run ${project_name}-lite"
+  export PUNKT_CMD_SERVE="govuk-docker-up ${project_name}-app"
 }

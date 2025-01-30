@@ -10,7 +10,7 @@ config.tab_bar_at_bottom = true
 
 -- Font configuration
 config.font = wezterm.font {
-  family = 'PragmataPro',
+  family = 'PragmataPro Mono',
   weight = 'Regular',
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }

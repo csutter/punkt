@@ -10,6 +10,7 @@ HISTCONTROL='ignoreboth'
 # Environment
 export CLICOLOR=1
 export EDITOR="nvim"
+export PATH="$HOME/bin:$PATH"
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"

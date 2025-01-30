@@ -12,6 +12,10 @@ export CLICOLOR=1
 export EDITOR="nvim"
 export PATH="$HOME/bin:$PATH"
 
+# 1Password SSH agent
+## Setting it in `.ssh/config` isn't enough for it to get picked up by Git
+export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_NO_ANALYTICS=1

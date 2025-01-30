@@ -70,7 +70,6 @@ Create a `$HOME/.rcrc` file as follows (adding additional tags if appropriate):
 EXCLUDES="_docs Brewfile LICENSE README.md"
 DOTFILES_DIRS="$HOME/Developer/punkt"
 UNDOTTED="bin Brewfile Library"
-TAGS="macos"
 ```
 
 Run `rcup -f` to set up the dotfiles.

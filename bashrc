@@ -29,19 +29,21 @@ source $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash
 source $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh
 
 # Prompt
+## Colors
+reset="\[$(tput sgr0)\]"
+bold="\[$(tput bold)\]"
+blue="\[$(tput setaf 4)\]"
+
 ## Configuration
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_FORMAT=" (%s)"
 PROMPT_DIRTRIM=2
-
-## Colors
-reset="\[$(tput sgr0)\]"
-bold="\[$(tput bold)\]"
+DIRENV_PS1='${DIRENV_DIR:+('"$blue"'%'"$reset"')}'
 
 ## Set prompt
-PS1="\u@\h:${bold}\w${reset}\$(__git_ps1)\\$ "
+PS1="\u@\h:${bold}\w${reset}\$(__git_ps1)${DIRENV_PS1}\\$ "
 
 # Docker Desktop (hopefully gone soon!)
 export COMPOSE_MENU=0 # disable Docker Desktop's irritating hijack of `docker-compose`
@@ -77,4 +79,5 @@ source $HOME/.aliases
 
 # direnv
 ## Load direnv _last_ as setting up other things after can cause headaches
+export DIRENV_LOG_FORMAT=
 eval "$(direnv hook bash)"

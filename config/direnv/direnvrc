@@ -10,6 +10,6 @@ layout_govuk_docker() {
 
   # Set up project commands
   export PUNKT_CMD_BUILD="(cd ${GOVUK_ROOT_DIR}/govuk-docker && make ${project_name})"
-  export PUNKT_CMD_RUN="govuk-docker run ${project_name}-lite"
+  export PUNKT_CMD_RUN="govuk-docker run --rm ${project_name}-lite"
   export PUNKT_CMD_SERVE="govuk-docker up ${project_name}-${STACK:-app}"
 }

@@ -13,3 +13,8 @@ layout_govuk_docker() {
   export PUNKT_CMD_RUN="govuk-docker run --rm ${project_name}-lite"
   export PUNKT_CMD_SERVE="govuk-docker up ${project_name}-${STACK:-app}"
 }
+
+# Use nvim_configsets [configsets]: Set up configsets for Neovim
+use_nvim_configsets() {
+  export PUNKT_NVIM_CONFIGSETS=$1
+}

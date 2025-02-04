@@ -21,6 +21,7 @@ return {
   { 'tpope/vim-rhubarb' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
+  { 'tpope/vim-endwise' },
   {
     'kylechui/nvim-surround',
     version = '*',

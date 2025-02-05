@@ -78,13 +78,13 @@ function xs() {
 ## xt(): Run the tests for the current project
 function xt() {
   : "${PUNKT_PROJECT_TEST_COMMAND:?must be set}"
-  eval "${PUNKT_PROJECT_TEST_COMMAND}"
+  xr "${PUNKT_PROJECT_TEST_COMMAND}"
 }
 
 ## xci(): Run the full CI suite for the current project
 function xci() {
   : "${PUNKT_PROJECT_CI_COMMAND:?must be set}"
-  eval "${PUNKT_PROJECT_CI_COMMAND}"
+  xt "${PUNKT_PROJECT_CI_COMMAND}"
 }
 
 # Aliases

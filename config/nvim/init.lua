@@ -6,5 +6,8 @@ require('user.terminal')
 -- Configsets
 require('configset')
 
+-- Project commands
+require('project_commands')
+
 -- Lazy plugins
 require('config.lazy')

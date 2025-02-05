@@ -9,7 +9,7 @@ layout_govuk_docker_app() {
   PATH_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
 
   # Set up how to run GOV.UK apps
-  use run_wrapper "govuk-docker run --rm --quiet-pull --remove-orphans ${project_name}-lite %s"
+  use run_wrapper "govuk-docker run --rm --quiet-pull --remove-orphans ${project_name}-lite sh -c '%s'"
   use build_command "(cd ${GOVUK_ROOT_DIR}/govuk-docker && make ${project_name})"
   use serve_command "govuk-docker up ${project_name}-${STACK:-app}" false
 }
@@ -44,54 +44,24 @@ use_build_command() {
 
 # Define a command to run a project's main server.
 #
-# Accepts an optional second argument, which if "true", will run this command in the context of the
-# run wrapper (see `use_run_wrapper`).
-#
 # Example:
-#   use serve_command "bin/dev" "true"
+#   use serve_command "bin/dev"
 use_serve_command() {
-  local raw_command=$1
-  local use_run_wrapper=$2
-
-  if [ "$use_run_wrapper" = "true" ]; then
-    export PUNKT_PROJECT_SERVE_COMMAND=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${raw_command}")
-  else
-    export PUNKT_PROJECT_SERVE_COMMAND=$raw_command
-  fi
+  export PUNKT_PROJECT_SERVE_COMMAND=$1
 }
 
 # Define a command to run a project's main test suite.
 #
-# Accepts an optional second argument, which if "true", will run this command in the context of the
-# run wrapper (see `use_run_wrapper`).
-#
 # Example:
-#   use test_command "bin/rspec" true
+#   use test_command "bin/rspec"
 use_test_command() {
-  local raw_command=$1
-  local use_run_wrapper=$2
-
-  if [ "$use_run_wrapper" = "true" ]; then
-    export PUNKT_PROJECT_TEST_COMMAND=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${raw_command}")
-  else
-    export PUNKT_PROJECT_TEST_COMMAND=$raw_command
-  fi
+  export PUNKT_PROJECT_TEST_COMMAND=$1
 }
 
 # Define a command to run a project's entire CI suite.
 #
-# Accepts an optional second argument, which if "true", will run this command in the context of the
-# run wrapper (see `use_run_wrapper`).
-#
 # Example:
-#   use ci_command "bin/test && bin/lint && bin/brakeman" "true"
+#   use ci_command "bin/test && bin/lint && bin/brakeman"
 use_ci_command() {
-  local raw_command=$1
-  local use_run_wrapper=$2
-
-  if [ "$use_run_wrapper" = "true" ]; then
-    export PUNKT_PROJECT_CI_COMMAND=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${raw_command}")
-  else
-    export PUNKT_PROJECT_CI_COMMAND=$raw_command
-  fi
+  export PUNKT_PROJECT_CI_COMMAND=$1
 }

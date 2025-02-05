@@ -1,20 +1,97 @@
 #!/bin/bash
 
 # Layout govuk_docker: Set up for projects run through GOV.UK
-layout_govuk_docker() {
+layout_govuk_docker_app() {
   local project_name=$(basename $(pwd))
 
   # Set up GOV.UK Docker
   export GOVUK_ROOT_DIR=$HOME/Developer/govuk
   PATH_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
 
-  # Set up project commands
-  export PUNKT_CMD_BUILD="(cd ${GOVUK_ROOT_DIR}/govuk-docker && make ${project_name})"
-  export PUNKT_CMD_RUN="govuk-docker run --rm --quiet-pull --remove-orphans ${project_name}-lite"
-  export PUNKT_CMD_SERVE="govuk-docker up ${project_name}-${STACK:-app}"
+  # Set up how to run GOV.UK apps
+  use run_wrapper "govuk-docker run --rm --quiet-pull --remove-orphans ${project_name}-lite %s"
+  use build_command "(cd ${GOVUK_ROOT_DIR}/govuk-docker && make ${project_name})"
+  use serve_command "govuk-docker up ${project_name}-${STACK:-app}" false
 }
 
 # Use nvim_configsets [configsets]: Set up configsets for Neovim
 use_nvim_configsets() {
   export PUNKT_NVIM_CONFIGSETS=$1
+}
+
+# Define up a wrapper for commands to be run in the context of a project, for example through a
+# development container.
+#
+# Tools would expect to use this through `sprintf`, so it should contain a single `%s` substitution
+# for the command to be run.
+#
+# Example:
+#   use run_wrapper "docker-compose run --rm '%s'"
+use_run_wrapper() {
+  export PUNKT_PROJECT_RUN_WRAPPER=$1
+}
+
+# Define a command to (re)build the project so it can be run locally.
+#
+# Depending on the type of project, this might produce an executable, or (re)build a development
+# container.
+#
+# Example:
+#   use build_command make
+use_build_command() {
+  export PUNKT_PROJECT_BUILD_COMMAND=$1
+}
+
+# Define a command to run a project's main server.
+#
+# Accepts an optional second argument, which if "true", will run this command in the context of the
+# run wrapper (see `use_run_wrapper`).
+#
+# Example:
+#   use serve_command "bin/dev" "true"
+use_serve_command() {
+  local raw_command=$1
+  local use_run_wrapper=$2
+
+  if [ "$use_run_wrapper" = "true" ]; then
+    export PUNKT_PROJECT_SERVE_COMMAND=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${raw_command}")
+  else
+    export PUNKT_PROJECT_SERVE_COMMAND=$raw_command
+  fi
+}
+
+# Define a command to run a project's main test suite.
+#
+# Accepts an optional second argument, which if "true", will run this command in the context of the
+# run wrapper (see `use_run_wrapper`).
+#
+# Example:
+#   use test_command "bin/rspec" true
+use_test_command() {
+  local raw_command=$1
+  local use_run_wrapper=$2
+
+  if [ "$use_run_wrapper" = "true" ]; then
+    export PUNKT_PROJECT_TEST_COMMAND=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${raw_command}")
+  else
+    export PUNKT_PROJECT_TEST_COMMAND=$raw_command
+  fi
+}
+
+# Define a command to run a project's entire CI suite.
+#
+# Accepts an optional second argument, which if "true", will run this command in the context of the
+# run wrapper (see `use_run_wrapper`).
+#
+# Example:
+#   use ci_command "bin/test && bin/lint && bin/brakeman" "true"
+use_ci_command() {
+  local raw_command=$1
+  local use_run_wrapper=$2
+
+  if [ "$use_run_wrapper" = "true" ]; then
+    export PUNKT_PROJECT_CI_COMMAND=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${raw_command}")
+  else
+    export PUNKT_PROJECT_CI_COMMAND=$raw_command
+  fi
 }

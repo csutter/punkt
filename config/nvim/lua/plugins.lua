@@ -16,6 +16,7 @@ return {
     'tpope/vim-fugitive',
     config = function()
       vim.keymap.set('n', '<leader>gg', vim.cmd.Git, { desc = 'Fugitive git status' })
+      vim.keymap.set('n', '<leader>gc', ':Git checkout ', { desc = 'Git checkout' })
     end
   },
   { 'tpope/vim-rhubarb' },
@@ -34,6 +35,22 @@ return {
     main = 'ibl',
     config = function()
       require('ibl').setup()
+    end
+  },
+  {
+    'RRethy/nvim-treesitter-textsubjects',
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        textsubjects = {
+          enable = true,
+          prev_selection = ',',
+          keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+            ['i;'] = { 'textsubjects-container-inner', desc = "Select inside containers (classes, functions, etc.)" },
+          },
+        },
+      })
     end
   },
   {

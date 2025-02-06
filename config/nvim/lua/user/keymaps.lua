@@ -7,6 +7,7 @@ vim.keymap.set('n', '_', vim.cmd.nohlsearch, { desc = 'Turn off highlight search
 
 -- Window shortcuts
 vim.keymap.set('n', '<C-Q>', ':close<CR>', { desc = 'Close current window', silent = true })
+vim.keymap.set('n', '<C-A-Q>', ':write<Bar>:close<CR>', { desc = 'Write and close current window', silent = true })
 vim.keymap.set('n', '[[', '<C-W>W', { desc = 'Go to previous window' })
 vim.keymap.set('n', ']]', '<C-W>w', { desc = 'Go to next window' })
 vim.keymap.set('n', '[{', vim.cmd.tabprevious, { desc = 'Go to previous tab' })

@@ -5,6 +5,9 @@ vim.keymap.set('n', '<leader>h', vim.cmd.hide, { desc = 'Hide buffer' })
 -- Single key shortcuts
 vim.keymap.set('n', '_', vim.cmd.nohlsearch, { desc = 'Turn off highlight search', silent = true })
 
+-- Window shortcuts
+vim.keymap.set('n', '<C-Q>', ':close<CR>', { desc = 'Close current window', silent = true })
+
 -- Disable arrow keys for insert and visual mode, to wean myself off
 vim.keymap.set('n', '<Up>', '<Nop>')
 vim.keymap.set('n', '<Down>', '<Nop>')

@@ -2,9 +2,8 @@
 vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = 'Write buffer' })
 vim.keymap.set('n', '<leader>h', vim.cmd.hide, { desc = 'Hide buffer' })
 
--- Toggles
-vim.keymap.set('n', '_/', vim.cmd.nohlsearch, { desc = 'Turn off highlight search' })
-vim.keymap.set('n', '_ ', ':set list!<CR>', { desc = 'Toggle list chars', silent = true })
+-- Single key shortcuts
+vim.keymap.set('n', '_', vim.cmd.nohlsearch, { desc = 'Turn off highlight search', silent = true })
 
 -- Disable arrow keys for insert and visual mode, to wean myself off
 vim.keymap.set('n', '<Up>', '<Nop>')

@@ -137,7 +137,7 @@ for name, runner in pairs(runners) do
   end
 end
 
-vim.keymap.set('n', '<C-\\>', ':20SProjectRun ', { desc = 'Run project command' })
-vim.keymap.set('n', '<M-\\>', ':20STerm ', { desc = 'Run local command' })
-vim.keymap.set('n', '<Leader>tt', ':20SProjectTest<CR>', { desc = 'Run local command' })
-vim.keymap.set('n', '<Leader>tc', ':20SProjectCI<CR>', { desc = 'Run local command' })
+vim.keymap.set('n', '<C-\\>', ':20BRProjectRun ', { desc = 'Run project command' })
+vim.keymap.set('n', '<M-\\>', ':20BRTerm ', { desc = 'Run local command' })
+vim.keymap.set('n', '<Leader>tt', ':20BRProjectTest<CR>', { desc = 'Run local command' })
+vim.keymap.set('n', '<Leader>tc', ':20BRProjectCI<CR>', { desc = 'Run local command' })

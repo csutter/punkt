@@ -28,6 +28,9 @@ source $HOMEBREW_PREFIX/etc/bash_completion
 source $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash
 source $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh
 
+# fzf
+eval "$(fzf --bash)"
+
 # Prompt
 ## Colors
 reset="\[$(tput sgr0)\]"

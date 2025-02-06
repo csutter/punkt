@@ -3,8 +3,14 @@
   name = Christian Sutter
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFZCGaMvY2vFp972eZQPb33f3lnaQo3DS4w7G7zeLIR4
 [alias]
+  a = add
+  b = branch
+  co = checkout
+  l = log --format=oneline
+  ll = log --format=medium
   prn = remote prune origin
   pp = push -u origin HEAD
+  u = pull
 [commit]
   gpgsign = true
 [gpg]

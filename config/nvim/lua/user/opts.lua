@@ -28,7 +28,6 @@ vim.opt.expandtab = true
 -- Gutter
 vim.opt.number = true
 vim.opt.numberwidth = 4
-vim.opt.relativenumber = true
 
 -- Improve split behaviour
 vim.opt.splitbelow = true
@@ -41,6 +40,3 @@ vim.opt.eol = true
 
 -- Tabline
 vim.opt.showtabline = 2
-
--- Winbar
-vim.opt.winbar = '%f'

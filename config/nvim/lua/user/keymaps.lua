@@ -7,6 +7,10 @@ vim.keymap.set('n', '_', vim.cmd.nohlsearch, { desc = 'Turn off highlight search
 
 -- Window shortcuts
 vim.keymap.set('n', '<C-Q>', ':close<CR>', { desc = 'Close current window', silent = true })
+vim.keymap.set('n', '[[', '<C-W>W', { desc = 'Go to previous window' })
+vim.keymap.set('n', ']]', '<C-W>w', { desc = 'Go to next window' })
+vim.keymap.set('n', '[{', vim.cmd.tabprevious, { desc = 'Go to previous tab' })
+vim.keymap.set('n', ']}', vim.cmd.tabnext, { desc = 'Go to next tab' })
 
 -- Disable arrow keys for insert and visual mode, to wean myself off
 vim.keymap.set('n', '<Up>', '<Nop>')

@@ -38,3 +38,9 @@ vim.opt.winheight = 5
 
 -- File handling settings
 vim.opt.eol = true
+
+-- Tabline
+vim.opt.showtabline = 2
+
+-- Winbar
+vim.opt.winbar = '%f'

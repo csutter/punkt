@@ -87,7 +87,6 @@ return {
     version = '*',
     config = function()
       require('mini.pairs').setup()
-      require('mini.tabline').setup()
 
       require('mini.diff').setup({
         view = {

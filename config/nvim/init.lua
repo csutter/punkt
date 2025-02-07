@@ -1,12 +1,8 @@
 -- Configuration
 require('core.options')
 require('core.keymaps')
-
--- Configsets
-require('configset')
+require('core.configset')
+require('core.lazy')
 
 -- Project commands
 require('project_commands')
-
--- Lazy plugins
-require('core.lazy')

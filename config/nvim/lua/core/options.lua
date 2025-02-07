@@ -40,3 +40,7 @@ vim.opt.eol = true
 
 -- Tabline
 vim.opt.showtabline = 2
+
+-- Title
+vim.opt.title = true
+vim.opt.titlestring = "%{fnamemodify(getcwd(), ':h:t')}/%{fnamemodify(getcwd(), ':t')}"

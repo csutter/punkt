@@ -1,6 +1,6 @@
--- Basic global configuration
-require('user.opts')
-require('user.keymaps')
+-- Configuration
+require('core.options')
+require('core.keymaps')
 
 -- Configsets
 require('configset')
@@ -9,4 +9,4 @@ require('configset')
 require('project_commands')
 
 -- Lazy plugins
-require('config.lazy')
+require('core.lazy')

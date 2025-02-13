@@ -6,7 +6,6 @@ vim.g.localleader = '\\'
 vim.opt.mouse = 'a'
 
 -- Colors
--- (colorscheme itself is set in Github theme setup in plugins.lua)
 vim.opt.termguicolors = true
 
 -- Search

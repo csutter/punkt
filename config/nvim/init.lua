@@ -1,8 +1,6 @@
 -- Configuration
-require('core.options')
-require('core.keymaps')
-require('core.configset')
-require('core.lazy')
+require('config.options')
+require('config.keymaps')
 
--- Project commands
-require('project_commands')
+-- Plugins through lazy.nvim
+require('lazy_plugins')

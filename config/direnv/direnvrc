@@ -3,39 +3,9 @@
 # Layout govuk_docker: Set up for projects run through GOV.UK
 layout_govuk_docker_app() {
   local project_name=$(basename $(pwd))
+  export GOVUK_PROJECT_NAME=$project_name
 
   # Set up GOV.UK Docker
   export GOVUK_ROOT_DIR=$HOME/Developer/govuk
   PATH_add "$GOVUK_ROOT_DIR/govuk-docker/exe"
-
-  # Set up how to run GOV.UK apps
-  # TODO: Reintroduce
-  # use run_wrapper "govuk-docker run --rm --quiet-pull --remove-orphans ${project_name}-lite sh -c '%s'"
-  # use build_command "(cd ${GOVUK_ROOT_DIR}/govuk-docker && make ${project_name})"
-  # use serve_command "govuk-docker up ${project_name}-${STACK:-app}" false
-}
-
-add_csv() {
-  local var_name="$1"
-  shift
-
-  local new_values
-  new_values=$(IFS=,; echo "$*")
-
-  local current_value="${!var_name}"
-  if [[ -z "$current_value" ]]; then
-    export "$var_name"="$new_values"
-  else
-    export "$var_name"="$current_value,$new_values"
-  fi
-}
-
-# use_ruby: Set up environment for Ruby
-use_ruby() {
-  add_csv NVIM_TREESITTER_LANGS ruby
-}
-
-# use_rails: Set up environment for Rails
-use_rails() {
-  add_csv NVIM_TREESITTER_LANGS css embedded_template html javascript json yaml
 }

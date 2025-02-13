@@ -59,37 +59,6 @@ function r() {
 }
 [ -d $HOME/Developer ] && complete -W "$(ls $HOME/Developer)" r
 
-## xb(): Build the current project
-function xb() {
-  : "${PUNKT_PROJECT_BUILD_COMMAND:?must be set}"
-  eval "${PUNKT_PROJECT_BUILD_COMMAND}"
-}
-
-## xr(): Run a command in an execution environment for the current project
-function xr() {
-  : "${PUNKT_PROJECT_RUN_WRAPPER:?must be set}"
-  local cmd=$(printf "${PUNKT_PROJECT_RUN_WRAPPER}" "${@}")
-  eval "${cmd}"
-}
-
-## xs(): Run a server for the current project
-function xs() {
-  : "${PUNKT_PROJECT_SERVE_COMMAND:?must be set}"
-  eval "${PUNKT_PROJECT_SERVE_COMMAND}"
-}
-
-## xt(): Run the tests for the current project
-function xt() {
-  : "${PUNKT_PROJECT_TEST_COMMAND:?must be set}"
-  xr "${PUNKT_PROJECT_TEST_COMMAND}"
-}
-
-## xci(): Run the full CI suite for the current project
-function xci() {
-  : "${PUNKT_PROJECT_CI_COMMAND:?must be set}"
-  xt "${PUNKT_PROJECT_CI_COMMAND}"
-}
-
 # Aliases
 source $HOME/.aliases
 

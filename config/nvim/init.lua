@@ -1,7 +1,7 @@
 -- Configuration
 require('config.base')
 require('config.keymaps')
-require('config.globals')
+require('config.autocmds')
 
 -- Plugins through lazy.nvim
 require('lazy_plugins')

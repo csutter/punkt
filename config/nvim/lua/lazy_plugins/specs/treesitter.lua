@@ -1,19 +1,24 @@
--- Treesitter language definitions are installed based on the contents of
--- `_G.punkt.treesitter_ensure_installed`, which is defined in `config/globals.lua`
--- and intended to be inserted into by project-local `.lazy.lua` config files.
+-- Language definitions to _always_ have installed (this may be extended by plugin specs in
+-- project-local `.lazy.lua` configuration)
+local core_languages = {
+  'bash',
+  'json',
+  'lua',
+  'markdown',
+  'vim',
+  'yaml',
+}
+
 return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    config = function ()
-      local configs = require('nvim-treesitter.configs')
-
-      configs.setup({
-        ensure_installed = _G.punkt.treesitter_ensure_installed,
-        sync_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
-      })
-    end
+    main = 'nvim-treesitter.configs',
+    opts = {
+      ensure_installed = core_languages,
+      sync_install = false,
+      highlight = { enable = true },
+      indent = { enable = true },
+    },
   },
 }

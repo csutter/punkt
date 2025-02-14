@@ -1,5 +1,6 @@
 .vscode
 .scratch
+.lazy.lua
 
 .DS_Store
 

@@ -39,12 +39,17 @@ function M.project_terminals_govuk_docker(opts)
         ci = {
           cmd = govuk_docker_wrapped_command(opts.ci_cmd),
         },
-        console = {
-          cmd = govuk_docker_wrapped_command('bin/rails console'),
-          autoclose = true,
+        rails = {
+          cmd = function(args)
+            local cmd = string.format('bin/rails %s', args)
+            return govuk_docker_wrapped_command(cmd)
+          end,
         },
-        dbconsole = {
-          cmd = govuk_docker_wrapped_command('bin/rails dbconsole'),
+        rails_interactive = {
+          cmd = function(args)
+            local cmd = string.format('bin/rails %s', args)
+            return govuk_docker_wrapped_command(cmd)
+          end,
           autoclose = true,
         },
         serve = {

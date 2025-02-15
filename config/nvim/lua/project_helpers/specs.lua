@@ -24,7 +24,12 @@ function M.project_terminals_govuk_docker(opts)
   local root_dir = vim.env.GOVUK_ROOT_DIR
   local app_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
 
-  local docker_wrapper = 'govuk-docker run --rm --quiet-pull --remove-orphans %s-lite sh -c \'%s\''
+  -- This previously used `govuk-docker` run like so:
+  --   govuk-docker run --rm --quiet-pull --remove-orphans %s-lite sh -c \'%s\'
+  -- But we normally have a server running anyway in the context of a Neovim session, so it's much
+  -- more performant to run this in the existing app container (the calculation probably changes
+  -- when we move to Linux and abandon Docker Desktop).
+  local docker_wrapper = 'docker exec -it govuk-docker-%s-app-1 sh -c \'%s\''
   local function govuk_docker_wrapped_command(cmd)
     return string.format(docker_wrapper, app_name, cmd)
   end
